@@ -1,0 +1,4 @@
+body{font-family:system-ui,sans-serif;max-width:34rem;margin:2rem auto;padding:0 1rem;background:#14161c;color:#e8e8ee}
+h1{margin-bottom:.2rem}a{color:#8ab4ff}form{display:grid;gap:.7rem;margin-top:1rem}
+label{display:grid;gap:.2rem}input,select,button{padding:.5rem;font-size:1rem;border-radius:4px;border:1px solid #444;background:#1e212b;color:inherit}
+button{background:#3a6df0;border:0;cursor:pointer}#msg{margin-top:1rem;min-height:1.5rem}.erro{color:#ff8a8a}.ok{color:#8aff9c}
