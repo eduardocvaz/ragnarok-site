@@ -85,6 +85,16 @@ details[open] summary { color: var(--ouro2); }
 .hash { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .copiar { font: inherit; font-size: .85rem; color: var(--texto); background: #1c2c5c; border: 1px solid #3b4f8f; border-radius: 6px; padding: .25rem .6rem; cursor: pointer; }
 .atencao { margin: 1.6rem 0 0; padding: .8rem 1rem; border-left: 3px solid var(--ouro); background: rgba(224,180,86,.08); border-radius: 0 8px 8px 0; }
+.recentes { margin-top: 1.4rem; }
+.recentes h2 { font-family: var(--titulo); color: var(--ouro2); font-size: 1.3rem; margin: 0 0 .7rem; text-align: center; }
+.novidades { display: grid; gap: .7rem; }
+.novidade { display: grid; gap: .2rem; text-decoration: none; color: var(--texto); padding: .8rem 1rem; border: 1px solid #2c3d78; border-left: 3px solid var(--ouro);
+  border-radius: 0 10px 10px 0; background: rgba(0,0,0,.22); }
+.novidade:hover { background: rgba(224,180,86,.08); }
+.novidade .data { color: var(--ouro); font-size: .85rem; font-weight: 700; }
+.novidade strong { color: var(--ouro2); }
+.novidade .resumo { color: var(--fraco); font-size: .92rem; }
+.mais { text-align: center; margin: .9rem 0 0; }
 .rodape { text-align: center; color: #8790b0; font-size: .85rem; padding: 0 1rem 2rem; }
 
 @media (max-width: 30rem) {

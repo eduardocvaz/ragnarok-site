@@ -32,6 +32,19 @@
   addEventListener("hashchange", () => { mostrar(); scrollTo(0, 0); });
   mostrar();
 
+  // últimas novidades (geradas pelo gerar-wiki.py)
+  fetch("wiki/recentes.json").then((r) => r.json()).then((ns) => {
+    if (!ns.length) return;
+    $("#lista-novidades").replaceChildren(...ns.map((n) => {
+      const a = document.createElement("a"); a.className = "novidade"; a.href = "wiki/" + n.url;
+      for (const [cl, tx] of [["data", n.data], ["titulo", n.titulo], ["resumo", n.resumo]]) {
+        const s = document.createElement(cl === "titulo" ? "strong" : "span"); if (cl !== "titulo") s.className = cl; s.textContent = tx; a.append(s);
+      }
+      return a;
+    }));
+    $("#recentes").hidden = false;
+  }).catch(() => {});
+
   // cadastro
   const f = $("#f"), msg = $("#msg"), botao = $("#enviar");
   const dizer = (t, ok) => { msg.textContent = t; msg.className = ok ? "ok" : "erro"; };

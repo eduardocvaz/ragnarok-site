@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Ataque Aéreo · Wiki MagnusRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="icon" href="../../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../favicon-32.png">
+<meta name="theme-color" content="#0b1430">
+<link rel="stylesheet" href="../../../estilo.css">
+<link rel="stylesheet" href="../../../wiki.css">
+</head>
+<body class="wiki" data-raiz="../../">
+<a id="topo"></a>
+<header class="topo-wiki">
+  <a class="marca" href="../../../index.html"><img src="../../../logo.png" alt="MagnusRO" width="56" height="56"></a>
+  <nav class="abas" aria-label="Seções">
+    <a href="../../../index.html#cadastro" class="aba">Cadastro</a>
+    <a href="../../../index.html#download" class="aba">Download</a>
+    <a href="../../index.html" class="aba" aria-current="page">Wiki</a>
+  </nav>
+</header>
+<div class="wiki-grade">
+  <aside class="lateral" id="lateral">
+    <button type="button" class="menu-botao" id="menu-botao" aria-expanded="false" aria-controls="menu-lista">☰ Páginas da wiki</button>
+    <div class="busca">
+      <input type="search" id="busca" placeholder="Buscar na wiki…" aria-label="Buscar na wiki" autocomplete="off">
+      <ol id="resultados" class="resultados" hidden></ol>
+    </div>
+    <nav id="menu-lista" class="menu-lista" aria-label="Páginas da wiki">
+      <a class="inicio-wiki" href="../../index.html">Início da wiki</a>
+      <h4>O que mudou</h4><ul><li><a href="../../alteracoes.html">O que mudou no servidor</a></li></ul><h4>Novidades</h4><ul><li><a href="../../novidades.html">Novidades do servidor</a></li></ul><h4>Viagem e teleporte</h4><ul><li><a href="../../distritos.html">Distrito dos Mercadores</a></li><li><a href="../../portal.html">Portal</a></li><li><a href="../../gema-de-portal.html">Gema de Portal</a></li><li><a href="../../balcao-de-portais.html">Balcão de Portais</a></li></ul><h4>Comércio</h4><ul><li><a href="../../restock.html">@restock</a></li><li><a href="../../forja-do-ferreiro.html">Forja do Ferreiro</a></li><li><a href="../../mineracao.html">Mineração</a></li><li><a href="../../cacador-de-forca.html">Caçador de Força e Fabricar Arco</a></li><li><a href="../../sabio-artesao.html">Sábio artesão e Desejo Arcano</a></li><li><a href="../../maestria-elemental.html">Maestria Elemental do Bruxo</a></li><li><a href="../../gemas-falsificadas.html">Gemas falsificadas</a></li><li><a href="../../catalogo.html">Catálogo de lojas</a></li></ul><h4>Habilidades</h4><ul><li><a href="../../homunculos.html">Homúnculos do Alquimista</a></li><li><a href="../../mercador-alquimista.html">Mercador e Alquimista — lote 2</a></li><li><a href="../../plantas.html">Plantas do Alquimista</a></li><li><a href="../../esferas.html">Esferas do Alquimista</a></li></ul>
+    </nav>
+  </aside>
+  <main class="conteudo">
+    <nav class="trilha" aria-label="Você está em"><a href="../../index.html">Wiki</a> <span class="sep">›</span> <a href="../../alteracoes.html">O que mudou</a> <span class="sep">›</span> <span aria-current="page">Ataque Aéreo</span></nav>
+    <h1 id="ataque-aereo">Ataque Aéreo</h1>
+<p><img alt="Ataque Aéreo" src="../../img/ht_blitzbeat.png" class="icone" /></p>
+<p><em>Caçador · ativa e automática (com o falcão)</em></p>
+<p>O falcão do Caçador ataca sozinho com mais frequência, sai sempre no
+nível que você aprendeu e acerta <strong>cada monstro da área com o dano
+inteiro</strong>.</p>
+<h2 id="como-era-como-ficou">Como era → como ficou</h2>
+<div class="tabela"><table>
+<thead>
+<tr>
+<th></th>
+<th>Como era</th>
+<th>Como ficou</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chance do automático</td>
+<td>~0,33% por ponto de SOR</td>
+<td><strong>0,5% por ponto de SOR</strong></td>
+</tr>
+<tr>
+<td>Nível do automático</td>
+<td>limitado pelo nível de classe ((nível de classe + 9) / 10)</td>
+<td><strong>o nível que você aprendeu</strong></td>
+</tr>
+<tr>
+<td>Dano do automático na área (3×3)</td>
+<td><strong>dividido</strong> entre os monstros</td>
+<td><strong>cheio em cada monstro</strong></td>
+</tr>
+<tr>
+<td>Ataque Aéreo usado à mão</td>
+<td>igual</td>
+<td>igual</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="niveis-e-numeros">Níveis e números</h2>
+<ul>
+<li><strong>Chance do automático</strong> a cada ataque normal com arco e o falcão:
+  <strong>SOR × 0,5%</strong>.</li>
+<li>SOR 30: 15%;</li>
+<li>SOR 60: 30%;</li>
+<li>SOR 90: <strong>45%</strong>.</li>
+<li><strong>Nível:</strong> o automático sai no nível aprendido (nv 5 = 5 golpes),
+  desde o primeiro nível de classe. Antes, um Caçador de nível de classe
+  20 só soltava o nv 2.</li>
+<li><strong>Área:</strong> o automático acerta os monstros do 3×3 em volta do alvo. Antes,
+  o dano se dividia entre eles; agora <strong>cada um toma o golpe inteiro</strong>.
+  Com 3 monstros juntos, é o triplo do dano de antes.</li>
+<li>O dano do falcão continua <strong>ignorando a DEF e a esquiva</strong> do monstro.</li>
+</ul>
+<h2 id="como-aprender">Como aprender</h2>
+<p>Pela árvore do Caçador, como antes: <strong>Adestrar Falcão</strong> e <strong>Garras de
+Aço</strong> (que aumenta o dano).</p>
+<h2 id="dicas">Dicas</h2>
+<ul>
+<li>A <strong>SOR</strong> é o atributo do falcão: com SOR 90, quase metade dos seus
+  ataques soltam o falcão.</li>
+<li>Mais <strong>velocidade de ataque</strong> também dá mais falcão, porque cada ataque
+  normal é uma chance.</li>
+<li>Puxe os monstros em grupo: o falcão acerta todos do 3×3 com o dano
+  inteiro.</li>
+</ul>
+<hr />
+<p>Habilidade original no bROwiki: <a href="https://browiki.org/wiki/Ataque_A%C3%A9reo" rel="noopener noreferrer" target="_blank">Ataque Aéreo</a>
+· Veja também: <a href="ataque-da-fera.html">Ataque da Fera</a>, <a href="inimigo-das-feras.html">Inimigo das Feras</a></p>
+  </main>
+</div>
+<a href="#topo" class="ao-topo" id="ao-topo" aria-label="Voltar ao topo">↑</a>
+<footer class="rodape">MagnusRO · servidor de testes entre amigos · sem fins comerciais</footer>
+<script src="../../../wiki.js"></script>
+</body>
+</html>

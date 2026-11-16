@@ -1,0 +1,78 @@
+/* Wiki do jogador (item 242): por cima do estilo.css (mesmas cores do MagnusRO). */
+.topo-wiki { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; padding: 1rem 1rem .6rem; }
+.marca img { display: block; width: 56px; height: 56px; filter: drop-shadow(0 4px 14px rgba(80,140,255,.4)); }
+
+.wiki-grade { display: grid; grid-template-columns: 16rem minmax(0, 1fr); gap: 1.2rem; max-width: 76rem; margin: 0 auto; padding: .6rem 1rem 2rem; align-items: start; }
+.lateral { position: sticky; top: .8rem; max-height: calc(100vh - 1.6rem); overflow: auto; background: linear-gradient(180deg, var(--painel), var(--fundo2));
+  border: 1px solid var(--borda); border-radius: 14px; padding: .9rem; }
+.menu-botao { display: none; }
+.menu-lista h4 { font-family: var(--titulo); color: var(--ouro); font-size: .85rem; letter-spacing: .05em; margin: 1rem 0 .3rem; text-transform: uppercase; }
+.menu-lista ul { list-style: none; padding: 0; margin: 0; }
+.menu-lista li a, .inicio-wiki { display: block; padding: .28rem .5rem; border-radius: 6px; color: var(--texto); text-decoration: none; font-size: .93rem; line-height: 1.35; }
+.menu-lista a:hover { background: rgba(140,192,255,.1); }
+.menu-lista a[aria-current="page"] { background: rgba(224,180,86,.16); color: var(--ouro2); font-weight: 700; }
+.inicio-wiki { margin-top: .6rem; font-weight: 700; }
+
+.busca { position: relative; }
+.busca input { width: 100%; font: inherit; font-size: .95rem; color: var(--texto); background: var(--campo); border: 1px solid #34488a; border-radius: 8px; padding: .55rem .7rem; }
+.busca input:focus { outline: 2px solid var(--ouro2); outline-offset: 1px; }
+.resultados { list-style: none; margin: .4rem 0 0; padding: .3rem; background: #0b1330; border: 1px solid var(--borda); border-radius: 8px; max-height: 60vh; overflow: auto; }
+.resultados a { display: block; padding: .4rem .5rem; border-radius: 6px; color: var(--texto); text-decoration: none; }
+.resultados a:hover, .resultados a:focus { background: rgba(140,192,255,.12); }
+.resultados small { display: block; color: var(--fraco); font-size: .8rem; line-height: 1.3; }
+.resultados .vazio { color: var(--fraco); padding: .4rem .5rem; }
+
+.conteudo { min-width: 0; max-width: none; margin: 0; background: linear-gradient(180deg, var(--painel), var(--fundo2)); border: 1px solid var(--borda); border-radius: 14px;
+  padding: 1.2rem 1.6rem 2rem; box-shadow: 0 10px 40px rgba(0,0,0,.45); overflow-wrap: break-word; }
+.trilha { font-size: .88rem; color: var(--fraco); margin-bottom: .8rem; }
+.trilha a { color: var(--azul); } .trilha .sep { margin: 0 .25rem; color: #6b7aa8; }
+.conteudo h1 { color: var(--ouro2); font-size: clamp(1.5rem, 4.5vw, 2.1rem); margin: .2rem 0 1rem; }
+.conteudo h2 { color: var(--ouro2); font-size: 1.35rem; margin: 2rem 0 .7rem; padding-bottom: .3rem; border-bottom: 1px solid var(--borda); }
+.conteudo h3 { color: var(--ouro); font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
+.conteudo h4 { color: var(--ouro); margin: 1.2rem 0 .4rem; }
+.conteudo blockquote { margin: 1rem 0; padding: .6rem 1rem; border-left: 3px solid var(--ouro); background: rgba(224,180,86,.08); border-radius: 0 8px 8px 0; }
+.conteudo blockquote p { margin: .2rem 0; }
+.conteudo ul, .conteudo ol { padding-left: 1.3rem; } .conteudo li { margin: .25rem 0; }
+.conteudo hr { border: 0; border-top: 1px solid var(--borda); margin: 1.8rem 0 1rem; }
+.conteudo pre { background: #08102a; border: 1px solid #2c3d78; border-radius: 8px; padding: .8rem; overflow-x: auto; }
+.conteudo pre code { border: 0; padding: 0; background: none; }
+.conteudo .fora { color: var(--fraco); }
+img.icone { width: 48px; height: 48px; image-rendering: pixelated; background: rgba(0,0,0,.35); border: 1px solid var(--borda); border-radius: 10px; padding: 6px; box-sizing: content-box; vertical-align: middle; }
+.conteudo > p:first-of-type > img.icone:only-child, .conteudo > img.icone { float: right; margin: 0 0 .8rem 1rem; }
+
+.tabela { overflow-x: auto; margin: 1rem 0; border: 1px solid #2c3d78; border-radius: 10px; -webkit-overflow-scrolling: touch; }
+.tabela table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.tabela th, .tabela td { padding: .5rem .7rem; border-bottom: 1px solid #22305f; text-align: left; vertical-align: top; }
+.tabela th { background: rgba(224,180,86,.12); color: var(--ouro2); font-weight: 700; white-space: nowrap; }
+.tabela tr:last-child td { border-bottom: 0; }
+.tabela tbody tr:nth-child(even) td { background: rgba(255,255,255,.025); }
+
+/* inicial */
+.cartoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .8rem; margin: .6rem 0 1rem; }
+.cartao { display: block; text-decoration: none; color: var(--texto); background: rgba(0,0,0,.25); border: 1px solid #2c3d78; border-radius: 12px; padding: .8rem 1rem;
+  transition: border-color .15s, transform .15s; }
+.cartao:hover { border-color: var(--ouro); transform: translateY(-2px); }
+.cartao h3, .cartao h4 { margin: 0 0 .3rem; color: var(--ouro2); font-family: var(--titulo); font-size: 1.02rem; }
+.cartao p { margin: 0; color: var(--fraco); font-size: .92rem; line-height: 1.45; }
+.destaques .grande-cartao { background: linear-gradient(160deg, rgba(31,74,168,.45), rgba(0,0,0,.25)); border-color: var(--borda); padding: 1.1rem 1.2rem; }
+.destaques h3 { font-size: 1.2rem; }
+.grupo { margin-top: 1.4rem !important; }
+
+.ao-topo { position: fixed; right: 1rem; bottom: 1rem; width: 2.8rem; height: 2.8rem; display: grid; place-items: center; border-radius: 50%; text-decoration: none;
+  font-size: 1.3rem; font-weight: 800; color: #1b1408; background: linear-gradient(#f3cf7a, #c9952f); box-shadow: 0 4px 14px rgba(0,0,0,.5);
+  opacity: 0; pointer-events: none; transition: opacity .2s; }
+.ao-topo.visivel { opacity: 1; pointer-events: auto; }
+
+@media (max-width: 52rem) {
+  .wiki-grade { grid-template-columns: minmax(0, 1fr); padding: .4rem .6rem 2rem; gap: .8rem; }
+  .lateral { position: static; max-height: none; padding: .7rem; }
+  .menu-botao { display: block; width: 100%; font: 700 1rem var(--titulo); color: var(--ouro2); background: rgba(0,0,0,.3); border: 1px solid var(--borda);
+    border-radius: 8px; padding: .6rem; margin-bottom: .6rem; cursor: pointer; }
+  .menu-lista { display: none; }
+  .lateral.aberta .menu-lista { display: block; }
+  .conteudo { padding: 1rem .9rem 1.6rem; }
+  .topo-wiki { gap: .6rem; padding-top: .8rem; }
+  .marca img { width: 44px; height: 44px; }
+  .topo-wiki .aba { min-width: 0; padding: .5rem .8rem; }
+  .conteudo > p:first-of-type > img.icone:only-child, .conteudo > img.icone { float: none; display: block; margin: 0 0 .8rem; }
+}

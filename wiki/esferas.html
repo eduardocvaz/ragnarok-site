@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Esferas do Alquimista · Wiki MagnusRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<meta name="theme-color" content="#0b1430">
+<link rel="stylesheet" href="../estilo.css">
+<link rel="stylesheet" href="../wiki.css">
+</head>
+<body class="wiki" data-raiz="">
+<a id="topo"></a>
+<header class="topo-wiki">
+  <a class="marca" href="../index.html"><img src="../logo.png" alt="MagnusRO" width="56" height="56"></a>
+  <nav class="abas" aria-label="Seções">
+    <a href="../index.html#cadastro" class="aba">Cadastro</a>
+    <a href="../index.html#download" class="aba">Download</a>
+    <a href="index.html" class="aba" aria-current="page">Wiki</a>
+  </nav>
+</header>
+<div class="wiki-grade">
+  <aside class="lateral" id="lateral">
+    <button type="button" class="menu-botao" id="menu-botao" aria-expanded="false" aria-controls="menu-lista">☰ Páginas da wiki</button>
+    <div class="busca">
+      <input type="search" id="busca" placeholder="Buscar na wiki…" aria-label="Buscar na wiki" autocomplete="off">
+      <ol id="resultados" class="resultados" hidden></ol>
+    </div>
+    <nav id="menu-lista" class="menu-lista" aria-label="Páginas da wiki">
+      <a class="inicio-wiki" href="index.html">Início da wiki</a>
+      <h4>O que mudou</h4><ul><li><a href="alteracoes.html">O que mudou no servidor</a></li></ul><h4>Novidades</h4><ul><li><a href="novidades.html">Novidades do servidor</a></li></ul><h4>Viagem e teleporte</h4><ul><li><a href="distritos.html">Distrito dos Mercadores</a></li><li><a href="portal.html">Portal</a></li><li><a href="gema-de-portal.html">Gema de Portal</a></li><li><a href="balcao-de-portais.html">Balcão de Portais</a></li></ul><h4>Comércio</h4><ul><li><a href="restock.html">@restock</a></li><li><a href="forja-do-ferreiro.html">Forja do Ferreiro</a></li><li><a href="mineracao.html">Mineração</a></li><li><a href="cacador-de-forca.html">Caçador de Força e Fabricar Arco</a></li><li><a href="sabio-artesao.html">Sábio artesão e Desejo Arcano</a></li><li><a href="maestria-elemental.html">Maestria Elemental do Bruxo</a></li><li><a href="gemas-falsificadas.html">Gemas falsificadas</a></li><li><a href="catalogo.html">Catálogo de lojas</a></li></ul><h4>Habilidades</h4><ul><li><a href="homunculos.html">Homúnculos do Alquimista</a></li><li><a href="mercador-alquimista.html">Mercador e Alquimista — lote 2</a></li><li><a href="plantas.html">Plantas do Alquimista</a></li><li><a href="esferas.html" aria-current="page">Esferas do Alquimista</a></li></ul>
+    </nav>
+  </aside>
+  <main class="conteudo">
+    <nav class="trilha" aria-label="Você está em"><a href="index.html">Wiki</a> <span class="sep">›</span> <span>Habilidades</span> <span class="sep">›</span> <span aria-current="page">Esferas do Alquimista</span></nav>
+    <h1 id="esferas-do-alquimista">Esferas do Alquimista</h1>
+<p><em>Regras aprovadas pelo dono em 2026-10-25; implementação e testes em andamento.</em></p>
+<p>A <strong>Esfera Marinha</strong> vira uma <strong>mina</strong>: você a deixa no chão, ela fica
+parada (não segue você) e, quando um monstro chega perto, vai até ele e
+dispara. Você escolhe o nível na habilidade, e cada nível invoca uma
+esfera diferente. Cada uso gasta um <strong>Frasco Pequeno</strong> e, do nível 2 em
+diante, um item do nível: 2 Poção Amarela Compacta · 3 Frescor do Vento ·
+4 Cristal Azul · 5 Sangue Vermelho.</p>
+<div class="tabela"><table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Esfera</th>
+<th>O que faz ao disparar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Explosiva</td>
+<td>explode com dano em área</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Curativa</td>
+<td>não espera monstro: quando <strong>você</strong> chega perto, dá a você e ao seu grupo em volta uma <strong>regeneração de 3 minutos</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Elétrica</td>
+<td>Tempestade de Raios em área</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gélida</td>
+<td><strong>congela sempre</strong> os monstros em volta e some sem explodir (explodir quebraria o gelo)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Incendiária</td>
+<td>Coluna de Fogo no lugar: vários golpes de fogo sem empurrar — um monstro preso na teia da Drosera das <a href="plantas.html">Plantas</a> toma o dobro</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Todas têm <strong>3.000 HP</strong>, em qualquer nível.</li>
+<li>Até 3 esferas ao mesmo tempo; sem monstro por perto, somem em 30 s.</li>
+<li><strong>Bater numa esfera faz ela disparar na hora</strong>, no lugar onde está —
+  seja você, outro jogador ou um monstro a bater. As suas esferas não
+  se acertam entre si: para estourar várias, bata em cada uma. Depois de disparar, a esfera não pode mais ser
+  acertada. A Curativa batida cura você e o seu grupo por perto, nunca
+  quem bateu nela se não for do seu grupo.</li>
+</ul>
+<p>A Curativa normal cura <strong>1% do HP máximo + 20 HP a cada 6 segundos</strong>,
+por 3 minutos, com a cura ajustada pela INT de quem a invocou. Outra
+Curativa renova o efeito; as curas não se somam. Dispel remove o efeito.</p>
+<p>O frasco <strong>falsificado</strong> dá metade do dano ou da cura da normal; a Gélida
+falsificada congela com cerca de <strong>60%</strong> de chance. O frasco <strong>forte</strong> usa um catalisador raro: Grande Natureza na Explosiva
+(explosão com raio maior), Poção Branca Compacta na Curativa (cura 50% mais
+e recupera 0,5% do SP máximo a cada 6 segundos), Vento Áspero na Elétrica
+(Senhor dos Trovões), Gelo Místico na Gélida (Nevasca) e Coração Flamejante
+na Incendiária (Chuva de Meteoros).</p>
+<p>A Curativa leva <strong>3 segundos para armar</strong> e dispara quando você chega a
+até 2 células; alcança você e seu grupo a até 3 células. Cada tipo tem
+uma cor: Explosiva laranja, Curativa verde, Elétrica amarela, Gélida
+azul-claro e Incendiária vermelha.</p>
+<p>Você pode fixar o frasco com dois cliques, sem gastá-lo. Sem um frasco
+fixado, a habilidade procura primeiro o falsificado, depois o normal e
+por último o forte.</p>
+  </main>
+</div>
+<a href="#topo" class="ao-topo" id="ao-topo" aria-label="Voltar ao topo">↑</a>
+<footer class="rodape">MagnusRO · servidor de testes entre amigos · sem fins comerciais</footer>
+<script src="../wiki.js"></script>
+</body>
+</html>
