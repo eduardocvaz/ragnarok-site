@@ -7,6 +7,8 @@ window.CONFIG = {
   // Pacote do cliente (cliente-dados, 16/11): tamanho e sha256 do ragnarok.zip.
   TAMANHO: "4,8 GB",
   SHA256: "198428cb419e83a748a7127815df37102f94dc73d3f2f9b1f9f9e24d4cfdd73e",
+  // Wiki do jogador (MkDocs, ragnarok-wiki-jogador): aba "Wiki" e as últimas novidades da inicial.
+  WIKI: "https://eduardocvaz.github.io/ragnarok-wiki-jogador/",
   // Nome e logo (item 240). LOGO = caminho da imagem ou "" (sem logo, o emblema provisório).
   NOME: "MagnusRO",
   LOGO: "logo.png",

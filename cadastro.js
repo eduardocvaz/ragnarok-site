@@ -32,18 +32,31 @@
   addEventListener("hashchange", () => { mostrar(); scrollTo(0, 0); });
   mostrar();
 
-  // últimas novidades (geradas pelo gerar-wiki.py)
-  fetch("wiki/recentes.json").then((r) => r.json()).then((ns) => {
-    if (!ns.length) return;
-    $("#lista-novidades").replaceChildren(...ns.map((n) => {
-      const a = document.createElement("a"); a.className = "novidade"; a.href = "wiki/" + n.url;
-      for (const [cl, tx] of [["data", n.data], ["titulo", n.titulo], ["resumo", n.resumo]]) {
-        const s = document.createElement(cl === "titulo" ? "strong" : "span"); if (cl !== "titulo") s.className = cl; s.textContent = tx; a.append(s);
-      }
-      return a;
-    }));
-    $("#recentes").hidden = false;
-  }).catch(() => {});
+  // últimas novidades: lidas da página de novidades da wiki do jogador (mesma origem, eduardocvaz.github.io)
+  const WIKI = C.WIKI || "";
+  if (WIKI) {
+    $("#aba-wiki").href = WIKI; $("#link-wiki").href = WIKI; $("#todas-novidades").href = WIKI + "novidades.html";
+    fetch(WIKI + "novidades.html").then((r) => (r.ok ? r.text() : Promise.reject())).then((t) => {
+      const doc = new DOMParser().parseFromString(t, "text/html");
+      const ns = [...doc.querySelectorAll("article h2[id]")].slice(0, 3).map((h) => {
+        let txt = "", e = h.nextElementSibling;
+        while (e && e.tagName !== "H2" && txt.length < 400) { txt += " " + e.textContent; e = e.nextElementSibling; }
+        txt = txt.replace(/\s+/g, " ").trim();
+        const [data, ...resto] = h.textContent.replace(/¶/g, "").trim().split(" — ");
+        return { data, titulo: resto.join(" — "), resumo: txt.length > 220 ? txt.slice(0, 220).replace(/\s\S*$/, "") + "…" : txt, url: WIKI + "novidades.html#" + h.id };
+      });
+      if (!ns.length) return;
+      $("#lista-novidades").replaceChildren(...ns.map((n) => {
+        const a = document.createElement("a"); a.className = "novidade"; a.href = n.url;
+        for (const [cl, tx] of [["data", n.data], ["titulo", n.titulo], ["resumo", n.resumo]]) {
+          if (!tx) continue;
+          const s = document.createElement(cl === "titulo" ? "strong" : "span"); if (cl !== "titulo") s.className = cl; s.textContent = tx; a.append(s);
+        }
+        return a;
+      }));
+      $("#recentes").hidden = false;
+    }).catch(() => {});
+  }
 
   // cadastro
   const f = $("#f"), msg = $("#msg"), botao = $("#enviar");
