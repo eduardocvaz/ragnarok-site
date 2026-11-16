@@ -1,7 +1,114 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Servidor Ragnarok</title><link rel="stylesheet" href="estilo.css"></head>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>MagnusRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta name="theme-color" content="#0b1430">
+<link rel="stylesheet" href="estilo.css">
+</head>
 <body>
-<h1>Servidor Ragnarok</h1>
-<p>Crie a sua conta para jogar. <a href="cadastro.html">Criar conta</a></p>
-</body></html>
+<header class="topo">
+  <div class="brasao" id="brasao" aria-hidden="true">
+    <!-- lugar do logo (CONFIG.LOGO); sem logo, este emblema -->
+    <svg viewBox="0 0 64 64" width="64" height="64"><path d="M32 3 58 14v17c0 15-11 25-26 30C17 56 6 46 6 31V14Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M32 15v32M22 25h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+  </div>
+  <h1 id="nome">MagnusRO</h1>
+  <p class="lema">Crie a sua conta, baixe o jogo e venha testar com a gente.</p>
+  <nav class="abas" aria-label="Seções">
+    <a href="#cadastro" class="aba" data-aba="cadastro">Cadastro</a>
+    <a href="#download" class="aba" data-aba="download">Download</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ============================== CADASTRO ============================== -->
+  <section id="cadastro" class="painel" aria-labelledby="t-cadastro">
+    <h2 id="t-cadastro">Criar conta</h2>
+    <p class="nota">Você precisa de um <strong>código de convite</strong> (quem te chamou manda). Cada código cria uma conta só.</p>
+    <form id="f" novalidate>
+      <label>Código de convite
+        <input name="convite" required maxlength="20" placeholder="RAG-XXXX-XXXX" autocomplete="off" autocapitalize="characters" spellcheck="false">
+      </label>
+      <label>Usuário <small>4 a 23 letras, números ou _</small>
+        <input name="usuario" required minlength="4" maxlength="23" pattern="[A-Za-z0-9_]+" autocomplete="username" autocapitalize="none" spellcheck="false">
+      </label>
+      <div class="duas">
+        <label>Senha <small>4 a 23, sem acentos</small>
+          <input name="senha" type="password" required minlength="4" maxlength="23" autocomplete="new-password">
+        </label>
+        <label>Repita a senha
+          <input name="senha2" type="password" required autocomplete="new-password">
+        </label>
+      </div>
+      <label>E-mail <small>um por pessoa</small>
+        <input name="email" type="email" required maxlength="39" autocomplete="email">
+      </label>
+      <fieldset class="sexo">
+        <legend>Personagens da conta</legend>
+        <label class="opcao"><input type="radio" name="sexo" value="M" checked> Masculino</label>
+        <label class="opcao"><input type="radio" name="sexo" value="F"> Feminino</label>
+      </fieldset>
+      <button class="botao" id="enviar">Criar conta</button>
+      <p id="msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="depois">Conta criada? Vá para o <a href="#download">Download</a>.</p>
+  </section>
+
+  <!-- ============================== DOWNLOAD ============================== -->
+  <section id="download" class="painel" aria-labelledby="t-download">
+    <h2 id="t-download">Baixar o jogo</h2>
+    <div class="baixar">
+      <a class="botao grande" id="link-drive" href="#" rel="noopener noreferrer" target="_blank">Baixar pelo Google Drive</a>
+      <p class="tamanho">Arquivo <code>ragnarok.zip</code> · <span id="tamanho">4,8 GB</span></p>
+      <p id="sem-link" class="aviso" hidden>O link do download sai em breve.</p>
+    </div>
+
+    <h3>Requisitos</h3>
+    <ul class="lista">
+      <li>Windows 10 ou 11 (64 bits)</li>
+      <li>Cerca de <strong>6 GB livres</strong> em disco</li>
+      <li>Placa de vídeo com DirectX 9</li>
+      <li>Linux: com o Wine (veja abaixo)</li>
+    </ul>
+
+    <h3>Como jogar, em 3 passos</h3>
+    <ol class="passos">
+      <li><strong>Extraia o .zip</strong> numa pasta (ex.: <code>C:\Jogos\Ragnarok</code>). Não rode de dentro do zip.</li>
+      <li>Dê dois cliques em <strong>Jogar.bat</strong>.</li>
+      <li>Entre com a <a href="#cadastro">conta que você criou</a>.</li>
+    </ol>
+
+    <details>
+      <summary>O antivírus ou o Windows reclamou</summary>
+      <p>O jogo é um programa antigo e modificado, e alguns antivírus o marcam por engano. Se aparecer “o Windows protegeu o computador”, clique em <strong>Mais informações</strong> e <strong>Executar assim mesmo</strong>. Se o antivírus apagar algum arquivo, restaure-o e adicione a pasta do jogo às exceções.</p>
+      <p>Para conferir que nada foi alterado no caminho, compare os arquivos com a lista do <code>SHA256SUMS</code> (mesma pasta). O <code>.zip</code> inteiro tem este SHA-256:</p>
+      <p class="hash"><code id="sha">198428cb419e83a748a7127815df37102f94dc73d3f2f9b1f9f9e24d4cfdd73e</code> <button type="button" class="copiar" id="copiar">copiar</button></p>
+    </details>
+    <details>
+      <summary>Faltou uma DLL (msvcp140, vcruntime140)</summary>
+      <p>Instale o “Microsoft Visual C++ Redistributable” <strong>x86</strong> do site da Microsoft.</p>
+    </details>
+    <details>
+      <summary>Linux</summary>
+      <p>Instale o Wine e, na pasta extraída, rode <code>./jogar.sh</code>.</p>
+    </details>
+
+    <p class="atencao"><strong>Atenção:</strong> é um servidor de <strong>testes</strong>: os personagens podem ser apagados ao fim do teste e as regras mudam. Não divulgue o link do download.</p>
+  </section>
+</main>
+
+<footer class="rodape">MagnusRO · servidor de testes entre amigos · sem fins comerciais</footer>
+<script src="config.js"></script>
+<script src="cadastro.js"></script>
+</body>
+</html>
